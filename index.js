@@ -2,7 +2,7 @@ var app = require('express')()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 var Q = 0
-
+var port = process.env.PORT || 5000;
 
 
 
@@ -24,4 +24,4 @@ io.on('connection', function(socket){
 
 
 //console.log("server jalan");
-server.listen(8081)
+server.listen(port)
